@@ -1,11 +1,7 @@
-sf_tutorial_base
+bug_tracker
 ==========
 
-Symfony チュートリアル用スケルトン 
+「Doctrine入門」チュートリアルのソースコードです。
 
-- Locale: ja
-- DB: SQLite
-- CSS: Bootstrap3 CDN
-- Layout Template: Bootstrap3
-- CRUD Template: Bootstrap3
-- Form: Bootstrap3
+http://symnote.kwalk.jp/doctrine
+
