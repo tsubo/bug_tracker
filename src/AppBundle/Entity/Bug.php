@@ -231,4 +231,14 @@ class Bug
     {
         return $this->products;
     }
+
+    public function close()
+    {
+        $this->setStatus(self::STATUS_CLOSE);
+    }
+ 
+    public function isClose()
+    {
+        return $this->getStatus() == self::STATUS_CLOSE;
+    }
 }
