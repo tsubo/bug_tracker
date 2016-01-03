@@ -24,13 +24,9 @@ class ProductController extends Controller
      */
     public function indexAction()
     {
-        $em = $this->getDoctrine()->getManager();
-
-        $dql = "SELECT p.id, p.name, count(b.id) AS openBugs FROM AppBundle:Bug b ".
-               "JOIN b.products p WHERE b.status = 'OPEN' GROUP BY p.id";
-        $products = $em->createQuery($dql)->getScalarResult();
-
-        dump($products);
+        $products = $this->getDoctrine()->getRepository('AppBundle:Bug')
+            ->getOpenBugsByProductQuery()
+            ->getResult();
 
         return $this->render('product/index.html.twig', array(
             'products' => $products,
