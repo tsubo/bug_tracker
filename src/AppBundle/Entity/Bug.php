@@ -12,6 +12,10 @@ use Symfony\Component\Validator\Constraints as Assert;
  */
 class Bug
 {
+    const STATUS_OPEN = "OPEN";
+    const STATUS_CLOSE = "CLOSE";
+    const STATUSES = [self::STATUS_OPEN, self::STATUS_CLOSE];
+
     /**
      * @ORM\Id
      * @ORM\Column(type="integer")
